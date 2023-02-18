@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootProject.rootDir}/base.gradle"
+setDefaultApplication this
+
+android {
+    namespace 'com.fhj.mymusic'
+    defaultConfig {
+        applicationId "com.fhj.mymusic"
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+}
+
+dependencies {
+
+    implementation(files("D:\\DevelopmentEnvironment\\Gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib\\1.7.10\\a47f6071d3ba1c695174371ffeb95ac2df2089a5\\kotlin-stdlib-1.7.10-sources.jar"))
+
+    implementation Dependencies.lifeCycle.viewModel
+    //播放音频
+    implementation Dependencies.EXO_PLAYER
+    //retrofit
+    implementation Dependencies.retrofit.retrofit2
+    implementation Dependencies.retrofit.gsonConvert
+    //gson
+    implementation Dependencies.gson
+
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation Dependencies.paging.paging
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+}

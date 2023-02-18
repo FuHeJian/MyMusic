@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/homeFragment"
+        android:icon="@mipmap/home"
+        android:title="主页"
+        >
+
+    </item>
+
+    <item
+        android:id="@id/squareFragment"
+        android:icon="@mipmap/square"
+        android:title="广场"
+        >
+
+    </item>
+
+    <item
+        android:id="@id/mineFragment"
+        android:icon="@mipmap/mine"
+        android:title="我的"
+        >
+    </item>
+
+
+
+</menu>

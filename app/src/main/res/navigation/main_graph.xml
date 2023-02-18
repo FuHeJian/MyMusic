@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.fhj.mymusic.fragment.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_squareFragment"
+            app:destination="@id/squareFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mineFragment2"
+            app:destination="@id/mineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mineFragment"
+        android:name="com.fhj.mymusic.fragment.mine.MineFragment"
+        android:label="MineFragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/squareFragment"
+        android:name="com.fhj.mymusic.fragment.square.SquareFragment"
+        android:label="SquareFragment" >
+    </fragment>
+</navigation>
